@@ -8,10 +8,10 @@ const Home = () => {
         className="min-h-[80vh] p-6 sm:p-10 flex flex-col sm:flex-row justify-center items-center space-y-5 sm:space-y-6"
       >
         <div className="flex flex-col space-y-6 items-start ">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white max-w-[90%] sm:max-w-3xl">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white max-w-[100%] sm:max-w-3xl">
             [INSERT SUB-NICHE SPECIFIC ATTENTION-GRABBING HEADLINE]
           </h1>
-          <p className=" text-base sm:text-lg md:text-xl text-gray-300 max-w-[90%] sm:max-w-xl">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-[90%] sm:max-w-xl">
             GET YOUR FREE [INSERT IRRESISTIBLE DEMO CALL OFFER]
           </p>
           <Button>Book in your free Demo</Button>
