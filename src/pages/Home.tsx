@@ -1,43 +1,43 @@
 import { Button } from "../components/ui/button";
 
-// interface CardType {
-//   subtitle: string;
-//   description: string;
-//   company_name: string;
-// }
+interface CardType {
+  subtitle: string;
+  description: string;
+  company_name: string;
+}
 
-// const cards: CardType[] = [
-//   {
-//     subtitle: "Process Part 1",
-//     description: "Initial planning and strategy development for the project.",
-//     company_name: "Acme Corp",
-//   },
-//   {
-//     subtitle: "Process Part 2",
-//     description: "Market research and analysis to identify opportunities.",
-//     company_name: "Insight Analytics",
-//   },
-//   {
-//     subtitle: "Process Part 3",
-//     description: "Design and prototyping of key features and interfaces.",
-//     company_name: "Creative Labs",
-//   },
-//   {
-//     subtitle: "Process Part 4",
-//     description: "Development and implementation of core functionalities.",
-//     company_name: "DevSolutions Inc.",
-//   },
-//   {
-//     subtitle: "Process Part 5",
-//     description: "Testing, QA, and performance optimization.",
-//     company_name: "Quality First",
-//   },
-//   {
-//     subtitle: "Process Part 6",
-//     description: "Deployment, monitoring, and post-launch support.",
-//     company_name: "LaunchPad Systems",
-//   },
-// ];
+const cards: CardType[] = [
+  {
+    subtitle: "Process Part 1",
+    description: "Initial planning and strategy development for the project.",
+    company_name: "Acme Corp",
+  },
+  {
+    subtitle: "Process Part 2",
+    description: "Market research and analysis to identify opportunities.",
+    company_name: "Insight Analytics",
+  },
+  {
+    subtitle: "Process Part 3",
+    description: "Design and prototyping of key features and interfaces.",
+    company_name: "Creative Labs",
+  },
+  {
+    subtitle: "Process Part 4",
+    description: "Development and implementation of core functionalities.",
+    company_name: "DevSolutions Inc.",
+  },
+  {
+    subtitle: "Process Part 5",
+    description: "Testing, QA, and performance optimization.",
+    company_name: "Quality First",
+  },
+  {
+    subtitle: "Process Part 6",
+    description: "Deployment, monitoring, and post-launch support.",
+    company_name: "LaunchPad Systems",
+  },
+];
 
 const Home = () => {
   return (
@@ -68,20 +68,35 @@ const Home = () => {
           </video>
         </div>
       </section>
-      <section id="about-us" className="min-h-screen p-6 sm:p-10">
-        <div>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Repudiandae ad exercitationem at dolore consectetur quos excepturi
-            ipsa nemo sed maxime?
+      <section
+        id="about-us"
+        className="min-h-screen p-6 sm:p-10 max-w-[1650px] mx-auto flex flex-col sm:flex-row justify-between items-center"
+      >
+        <div className="space-y-5 w-full sm:w-2/4">
+          <Button>Funcionality</Button>
+          <h1 className="text-4xl sm:text-6xl bg-gradient-to-r from-white to-gray-500 bg-clip-text  tracking-tight text-transparent">
+            Your Getaway to Infinity Possibilities
+          </h1>
+          <p className="text-gray-100 mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            exercitationem fugit odit explicabo deserunt ipsum.
           </p>
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, unde!
-            </p>
-            <p>Here's our Process</p>
-          </div>
+        </div>
+        <div className="space-y-4 h-[800px] overflow-y-scroll">
+          {cards.map((item) => (
+            <div
+              key={item.subtitle}
+              className="w-[320px] sm:w-[500px] sm:h-[300px] border-2 rounded-xl p-5 shadow-xl flex flex-col items-start justify-between"
+            >
+              <div className="text-green-500 border rounded-md inline-block px-2">
+                {item.company_name}
+              </div>
+              <div className="rounded-xl max-w-[300px] space-y-3 p-3 bg-[#1e1f1e]">
+                <p className="text-2xl ">{item.subtitle}</p>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       <section id="philosophy" className="min-h-screen p-6 sm:p-10">

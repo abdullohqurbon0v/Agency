@@ -110,6 +110,10 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+::-webkit-scrollbar {
+  height: 0;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
