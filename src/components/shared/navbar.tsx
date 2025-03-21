@@ -90,7 +90,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 w-full z-50">
       <motion.header
-        className="border rounded-xl py-4 px-5 bg-transparent flex justify-between items-center shadow-lg backdrop-blur-sm bg-opacity-80"
+        className="border py-4 px-5 bg-transparent flex justify-between items-center shadow-lg backdrop-blur-sm bg-opacity-80"
         initial={{ y: -30 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
