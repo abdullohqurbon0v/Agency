@@ -1,43 +1,43 @@
 import { Button } from "../components/ui/button";
 
-interface CardType {
-  subtitle: string;
-  description: string;
-  company_name: string;
-}
+// interface CardType {
+//   subtitle: string;
+//   description: string;
+//   company_name: string;
+// }
 
-const cards: CardType[] = [
-  {
-    subtitle: "Process Part 1",
-    description: "Initial planning and strategy development for the project.",
-    company_name: "Acme Corp",
-  },
-  {
-    subtitle: "Process Part 2",
-    description: "Market research and analysis to identify opportunities.",
-    company_name: "Insight Analytics",
-  },
-  {
-    subtitle: "Process Part 3",
-    description: "Design and prototyping of key features and interfaces.",
-    company_name: "Creative Labs",
-  },
-  {
-    subtitle: "Process Part 4",
-    description: "Development and implementation of core functionalities.",
-    company_name: "DevSolutions Inc.",
-  },
-  {
-    subtitle: "Process Part 5",
-    description: "Testing, QA, and performance optimization.",
-    company_name: "Quality First",
-  },
-  {
-    subtitle: "Process Part 6",
-    description: "Deployment, monitoring, and post-launch support.",
-    company_name: "LaunchPad Systems",
-  },
-];
+// const cards: CardType[] = [
+//   {
+//     subtitle: "Process Part 1",
+//     description: "Initial planning and strategy development for the project.",
+//     company_name: "Acme Corp",
+//   },
+//   {
+//     subtitle: "Process Part 2",
+//     description: "Market research and analysis to identify opportunities.",
+//     company_name: "Insight Analytics",
+//   },
+//   {
+//     subtitle: "Process Part 3",
+//     description: "Design and prototyping of key features and interfaces.",
+//     company_name: "Creative Labs",
+//   },
+//   {
+//     subtitle: "Process Part 4",
+//     description: "Development and implementation of core functionalities.",
+//     company_name: "DevSolutions Inc.",
+//   },
+//   {
+//     subtitle: "Process Part 5",
+//     description: "Testing, QA, and performance optimization.",
+//     company_name: "Quality First",
+//   },
+//   {
+//     subtitle: "Process Part 6",
+//     description: "Deployment, monitoring, and post-launch support.",
+//     company_name: "LaunchPad Systems",
+//   },
+// ];
 
 const Home = () => {
   return (
