@@ -86,7 +86,7 @@ const Home = () => {
           {cards.map((item) => (
             <div
               key={item.subtitle}
-              className="w-[320px] sm:w-[500px] sm:h-[300px] border-2 rounded-xl p-5 shadow-xl flex flex-col items-start justify-between"
+              className="w-[320px] sm:w-[500px] h-[250px] sm:h-[300px] border-2 rounded-xl p-5 shadow-xl flex flex-col items-start justify-between"
             >
               <div className="text-green-500 border rounded-md inline-block px-2">
                 {item.company_name}
