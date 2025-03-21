@@ -5,9 +5,20 @@ const App = () => {
     <div className="p-5 pt-20">
       <Navbar />
       <main className="space-y-40">
-        <section id="our-process" className="h-screen  p-10">
-          <h1 className="text-3xl">Our Process</h1>
-          <p>This is the Our Process section.</p>
+        <section
+          id="our-process"
+          className="h-screen p-10 flex flex-col justify-center space-y-5"
+        >
+          <h1 className="text-3xl text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo,
+            beatae.
+          </h1>
+          <p className="text-center text- mb-7">
+            Lorem ipsum, dolor sit amet consectetur adipisicing.
+          </p>
+          <div className="w-[500px] h-[400px] bg-white">
+            <video></video>
+          </div>
         </section>
         <section id="about-us" className="h-screen  p-10">
           <h1 className="text-3xl">About Us</h1>

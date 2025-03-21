@@ -7,16 +7,16 @@ import "./types/index.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <div className="relative min-h-screen">
-      {/* <video
+      <video
         autoPlay
         loop
         muted
         playsInline
         className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
       >
-        <source src="/ng.mp4" type="video/mp4" />
+        <source src="/bgvideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video> */}
+      </video>
       <ThemeProvider>
         <App />
       </ThemeProvider>
