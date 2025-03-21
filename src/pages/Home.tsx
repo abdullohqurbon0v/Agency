@@ -2,9 +2,11 @@ import { Button } from "../components/ui/button";
 
 interface CardType {
   subtitle: string;
+  description: string;
+  company_name: string;
 }
 
-const cards: CardType = [
+const cards: CardType[] = [
   {
     subtitle: "Process Part 1",
     description: "Initial planning and strategy development for the project.",
