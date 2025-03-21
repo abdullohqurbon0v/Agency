@@ -88,7 +88,7 @@ const Navbar = () => {
   }, [hrefs]);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 p-5">
+    <div className="fixed top-0 left-0 w-full z-50">
       <motion.header
         className="border rounded-xl py-4 px-5 bg-transparent flex justify-between items-center shadow-lg backdrop-blur-sm bg-opacity-80"
         initial={{ y: -30 }}
@@ -100,7 +100,6 @@ const Navbar = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          whileHover={{ scale: 1.05 }}
         >
           Spheric
         </motion.p>
