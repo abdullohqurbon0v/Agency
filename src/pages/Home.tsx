@@ -66,34 +66,44 @@ const Home = () => {
     <main className="space-y-20 sm:space-y-40">
       <motion.section
         id="about"
-        className="min-h-[80vh] p-6 sm:p-10 flex flex-col sm:flex-row justify-center items-center space-y-5 sm:space-y-6"
+        className="min-h-[80vh] p-6 sm:p-10 flex flex-col justify-center items-center space-y-5 sm:space-y-6 relative overflow-hidden mt-5"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.2 }}
       >
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-70 z-0"
+        >
+          <source src="/4408477.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <motion.div
-          className="flex flex-col space-y-6 items-start"
+          className="flex flex-col space-y-6 items-center relative z-10"
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: 0.3 }}
         >
           <motion.h1
-            className="text-2xl md:text-4xl lg:text-5xl font-bold text-white max-w-[100%] sm:max-w-5xl bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-center"
+            className="text-2xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-purple-200 to-blue-300 bg-clip-text tracking-tight text-transparent max-w-[100%] sm:max-w-5xl text-center"
             variants={childVariants}
           >
             Turn Clicks into Customers, and Customers into Brand Loyalist
           </motion.h1>
           <motion.p
-            className="text-base sm:text-lg md:text-3xl text-gray-200  text-center max-w-5xl mx-auto"
+            className="text-base sm:text-lg md:text-3xl text-gray-200 text-center max-w-5xl mx-auto"
             variants={childVariants}
           >
-            We drive traffic,increase conversesions, and scale your online store
-            throught data-driven strategies.
+            We drive traffic, increase conversions, and scale your online store
+            through data-driven strategies.
           </motion.p>
           <motion.button
-            className="px-4 py-2 bg-black text-white rounded-lg shadow-lg  cursor-pointer transition-shadow duration-300 mx-auto"
+            className="px-4 py-2 bg-black text-white rounded-lg shadow-lg cursor-pointer transition-shadow duration-300 mx-auto"
             variants={childVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -166,7 +176,7 @@ const Home = () => {
         className="min-h-screen p-6 sm:p-10 bg-[rgba(74,36,157,0.1)]"
       >
         <div className="max-w-[1650px] mx-auto flex flex-col space-y-5 items-center">
-          <p className="text-center text-7xl">
+          <p className="text-center text-5xl">
             VestraX is the proven e-commerce growth partner for Sports apparel &
             equipment brands ready to power past 8 figures
           </p>

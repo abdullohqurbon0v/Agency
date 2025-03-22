@@ -19,17 +19,6 @@ const Root = () => {
     <StrictMode>
       <BrowserRouter>
         <div className="relative min-h-screen">
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
-          >
-            <source src="/4408477.mp4" type="video/mp4" />
-            Orqa fon rasm
-          </video>
           <ThemeProvider>
             <App />
           </ThemeProvider>
