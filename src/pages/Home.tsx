@@ -80,44 +80,26 @@ const Home = () => {
           viewport={{ amount: 0.3 }}
         >
           <motion.h1
-            className="text-2xl md:text-4xl lg:text-5xl font-bold text-white max-w-[100%] sm:max-w-3xl bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold text-white max-w-[100%] sm:max-w-3xl bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-center"
             variants={childVariants}
           >
-            [INSERT SUB-NICHE SPECIFIC ATTENTION-GRABBING HEADLINE]
+            Turn Clicks into Customers, and Customers into Brand Loyalist
           </motion.h1>
           <motion.p
-            className="text-base sm:text-lg md:text-xl text-gray-200 max-w-[90%] sm:max-w-xl"
+            className="text-base sm:text-lg md:text-xl text-gray-200 max-w-[90%] text-center"
             variants={childVariants}
           >
-            GET YOUR FREE [INSERT IRRESISTIBLE DEMO CALL OFFER]
+            We drive traffic,increase conversesions, and scale your online store
+            throught data-driven strategies.
           </motion.p>
           <motion.button
-            className="px-4 py-2 bg-[rgba(74,36,157,0.9)] text-white rounded-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-shadow duration-300"
+            className="px-4 py-2 bg-black text-white rounded-lg shadow-lg  cursor-pointer transition-shadow duration-300 mx-auto"
             variants={childVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Book in your free Demo
           </motion.button>
-        </motion.div>
-
-        <motion.div
-          className="w-full max-w-full sm:max-w-[600px] md:max-w-[800px] h-[200px] sm:h-[300px] md:h-[400px] bg-gray-800 rounded-lg shadow-lg shadow-blue-900/40 overflow-hidden"
-          variants={childVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.3 }}
-        >
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover opacity-90"
-          >
-            <source src="/bgvideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
         </motion.div>
       </motion.section>
 
@@ -130,7 +112,7 @@ const Home = () => {
         viewport={{ amount: 0.2 }}
       >
         <motion.div
-          className="space-y-5 w-full sm:w-2/4 sticky top-10"
+          className="space-y-5 w-full sm:w-2/4 sticky top-80"
           variants={childVariants}
         >
           <button className="px-4 py-2 bg-[rgba(23,37,84,0.9)] text-purple-300 rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300">
