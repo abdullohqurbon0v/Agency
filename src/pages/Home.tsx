@@ -1,51 +1,49 @@
+/* eslint-disable no-irregular-whitespace */
 import { motion } from "framer-motion";
+import useMediaQuery from "../hooks/use-media-query";
 
 interface CardType {
   subtitle: string;
   description: string;
-  company_name: string;
 }
 
 const cards: CardType[] = [
   {
     subtitle: "Process Part 1",
     description: "Initial planning and strategy development for the project.",
-    company_name: "Acme Corp",
   },
   {
     subtitle: "Process Part 2",
     description: "Market research and analysis to identify opportunities.",
-    company_name: "Insight Analytics",
   },
   {
     subtitle: "Process Part 3",
     description: "Design and prototyping of key features and interfaces.",
-    company_name: "Creative Labs",
   },
   {
     subtitle: "Process Part 4",
     description: "Development and implementation of core functionalities.",
-    company_name: "DevSolutions Inc.",
   },
   {
     subtitle: "Process Part 5",
     description: "Testing, QA, and performance optimization.",
-    company_name: "Quality First",
   },
   {
     subtitle: "Process Part 6",
     description: "Deployment, monitoring, and post-launch support.",
-    company_name: "LaunchPad Systems",
   },
 ];
 
 const Home = () => {
+  const media = useMediaQuery("(max-width: 700px)");
+  console.log(media);
   const sectionVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, scale: 0.95 },
     visible: {
       opacity: 1,
+      scale: 1,
       transition: {
-        duration: 1.2, // Increased from 0.8 to 1.2 seconds
+        duration: 1.2,
         ease: "easeOut",
         when: "beforeChildren",
         staggerChildren: 0.2,
@@ -53,45 +51,46 @@ const Home = () => {
     },
   };
   const childVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: { duration: 1.0, ease: "easeOut" }, // Increased from 0.6 to 1.0 seconds
+      scale: 1,
+      transition: { duration: 1.0, ease: "easeOut" },
     },
   };
 
   return (
-    <main className="space-y-20 sm:space-y-40 ">
+    <main className="space-y-20 sm:space-y-40">
       <motion.section
         id="about"
-        className="min-h-[80vh] p-6 sm:p-10 flex flex-col sm:flex-row justify-center items-center space-y-5 sm:space-y-6 "
+        className="min-h-[80vh] p-6 sm:p-10 flex flex-col sm:flex-row justify-center items-center space-y-5 sm:space-y-6 text-center"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.2 }}
       >
         <motion.div
-          className="flex flex-col space-y-6 items-start"
+          className="flex flex-col space-y-6 items-start "
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: 0.3 }}
         >
           <motion.h1
-            className="text-2xl md:text-4xl lg:text-5xl font-bold text-white max-w-[100%] sm:max-w-3xl bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text "
+            className="text-2xl md:text-4xl lg:text-5xl font-bold text-white max-w-[100%] sm:max-w-3xl bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text"
             variants={childVariants}
           >
-            [INSERT SUB-NICHE SPECIFIC ATTENTION-GRABBING HEADLINE]
+            Turn Clicks﻿ into Customers, and Customers into Brand Loyalists
           </motion.h1>
           <motion.p
-            className="text-base sm:text-lg md:text-xl text-gray-200 max-w-[90%] sm:max-w-xl"
+            className="text-base sm:text-lg md:text-xl text-gray-200 max-w-[90%] sm:max-w-xl  mx-auto text-center"
             variants={childVariants}
           >
-            GET YOUR FREE [INSERT IRRESISTIBLE DEMO CALL OFFER]
+            We drive traffic, increase conversions, and scale your online store
+            through data-driven strategies.
           </motion.p>
           <motion.button
-            className="px-4 py-2 bg-[rgba(74,36,157,0.9)] text-white rounded-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-shadow duration-300"
+            className="px-4 py-2 bg-black text-white rounded-lg shadow-lg transition-shadow duration-300 mx-auto cursor-po"
             variants={childVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -99,30 +98,11 @@ const Home = () => {
             Book in your free Demo
           </motion.button>
         </motion.div>
-
-        <motion.div
-          className="w-full max-w-full sm:max-w-[600px] md:max-w-[800px] h-[200px] sm:h-[300px] md:h-[400px] bg-gray-800 rounded-lg shadow-lg shadow-blue-900/40 overflow-hidden"
-          variants={childVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.3 }}
-        >
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover opacity-90"
-          >
-            <source src="/bgvideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </motion.div>
       </motion.section>
 
       <motion.section
         id="services"
-        className="min-h-screen p-6 sm:p-10 max-w-[1650px] mx-auto flex flex-col sm:flex-row justify-between items-center "
+        className="min-h-screen p-6 sm:p-10 max-w-[1650px] mx-auto flex flex-col sm:flex-row justify-between items-center"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -132,16 +112,16 @@ const Home = () => {
           className="space-y-5 w-full sm:w-2/4"
           variants={childVariants}
         >
+          <h1 className="text-4xl sm:text-6xl bg-gradient-to-r from-purple-200 to-blue-300 bg-clip-text tracking-tight text-transparent font-bold drop-shadow-lg">
+            Your Growth Partner in E-Commerce Success
+          </h1>
+          <p className="text-gray-200 mb-4 drop-shadow-md">
+            We help brands optimize their digital presence and maximize revenue
+            through advanced marketing strategies.
+          </p>
           <button className="px-4 py-2 bg-[rgba(23,37,84,0.9)] text-purple-300 rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300">
             Functionality
           </button>
-          <h1 className="text-4xl sm:text-6xl bg-gradient-to-r from-purple-200 to-blue-300 bg-clip-text tracking-tight text-transparent font-bold drop-shadow-lg">
-            Your Getaway to Infinite Possibilities
-          </h1>
-          <p className="text-gray-200 mb-4 drop-shadow-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            exercitationem fugit odit explicabo deserunt ipsum.
-          </p>
         </motion.div>
 
         <motion.div
@@ -156,9 +136,6 @@ const Home = () => {
               whileHover={{ scale: 1.02 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[rgba(74,36,157,0.1)] via-[rgba(23,37,84,0.1)] to-[rgba(147,51,234,0.1)] opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-              <div className="relative z-10 text-purple-300 border border-[rgba(147,51,234,0.4)] rounded-md inline-block px-3 py-1 bg-[rgba(17,24,39,0.5)] shadow-md shadow-[rgba(147,51,234,0.2)]">
-                {item.company_name}
-              </div>
               <div className="relative z-10 rounded-xl max-w-[300px] space-y-3 p-3 bg-[rgba(31,41,55,0.7)] border border-[rgba(74,36,157,0.5)] shadow-inner shadow-[rgba(0,0,0,0.4)]">
                 <p
                   className="text-2xl text-gray-100 font-semibold tracking-tight"
