@@ -62,7 +62,7 @@ const Home = () => {
   return (
     <main className="space-y-20 sm:space-y-40">
       <motion.section
-        id="our-process"
+        id="about"
         className="min-h-[80vh] p-6 sm:p-10 flex flex-col sm:flex-row justify-center items-center space-y-5 sm:space-y-6 "
         variants={sectionVariants}
         initial="hidden"
@@ -118,7 +118,7 @@ const Home = () => {
         </motion.div>
       </motion.section>
       <motion.section
-        id="about-us"
+        id="services"
         className="min-h-screen p-6 sm:p-10 max-w-[1650px] mx-auto flex flex-col sm:flex-row justify-between items-center"
         variants={sectionVariants}
         initial="hidden"
@@ -175,10 +175,16 @@ const Home = () => {
           ))}
         </motion.div>
       </motion.section>
-      <section id="philosophy" className="min-h-screen p-6 sm:p-10">
+      <section id="process" className="min-h-screen p-6 sm:p-10">
         <div></div>
       </section>
-      <section id="blog" className="min-h-screen p-6 sm:p-10">
+      <section id="team" className="min-h-screen p-6 sm:p-10">
+        <h1 className="text-2xl sm:text-3xl font-bold text-white">Blog</h1>
+        <p className="text-base sm:text-lg text-gray-300 mt-2">
+          This is the Blog section.
+        </p>
+      </section>
+      <section id="faq" className="min-h-screen p-6 sm:p-10">
         <h1 className="text-2xl sm:text-3xl font-bold text-white">Blog</h1>
         <p className="text-base sm:text-lg text-gray-300 mt-2">
           This is the Blog section.

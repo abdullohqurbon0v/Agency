@@ -46,7 +46,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState<string>("");
   const [isSheetOpen, setIsSheetOpen] = useState<boolean>(false);
 
-  const navItems: string[] = ["Our Process", "About Us", "Philosophy", "Blog"];
+  const navItems: string[] = ["About", "Services", "Process", "Team", "FAQ"];
   const hrefs: string[] = navItems.map(
     (item) => `#${item.toLowerCase().replace(" ", "-")}`
   );

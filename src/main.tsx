@@ -27,8 +27,8 @@ const Root = () => {
             playsInline
             className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
           >
-            <source src="/bg.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+            <source src="/4408477.mp4" type="video/mp4" />
+            Orqa fon rasm
           </video>
           <ThemeProvider>
             <App />
