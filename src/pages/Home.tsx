@@ -115,9 +115,6 @@ const Home = () => {
           className="space-y-5 w-full sm:w-2/4 sticky top-80"
           variants={childVariants}
         >
-          <button className="px-4 py-2 bg-[rgba(23,37,84,0.9)] text-purple-300 rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300">
-            Functionality
-          </button>
           <h1 className="text-4xl sm:text-6xl bg-gradient-to-r from-purple-200 to-blue-300 bg-clip-text tracking-tight text-transparent font-bold drop-shadow-lg">
             Your Getaway to Infinite Possibilities
           </h1>
@@ -125,9 +122,12 @@ const Home = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
             exercitationem fugit odit explicabo deserunt ipsum.
           </p>
+          <button className="px-4 py-2 bg-[rgba(23,37,84,0.9)] text-purple-300 rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300">
+            Functionality
+          </button>
         </motion.div>
         <motion.div
-          className="space-y-4 w-full sm:w-2/4"
+          className="space-y-4 w-full sm:w-1/3"
           variants={childVariants}
         >
           {cards.map((item) => (
