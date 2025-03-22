@@ -86,7 +86,7 @@ const Home = () => {
             Turn Clicks into Customers, and Customers into Brand Loyalist
           </motion.h1>
           <motion.p
-            className="text-base sm:text-lg md:text-xl text-gray-200 max-w-[90%] text-center"
+            className="text-base sm:text-lg md:text-xl text-gray-200  text-center max-w-3xl"
             variants={childVariants}
           >
             We drive traffic,increase conversesions, and scale your online store
@@ -126,7 +126,6 @@ const Home = () => {
             exercitationem fugit odit explicabo deserunt ipsum.
           </p>
         </motion.div>
-
         <motion.div
           className="space-y-4 w-full sm:w-2/4"
           variants={childVariants}
