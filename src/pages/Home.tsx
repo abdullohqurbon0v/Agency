@@ -151,15 +151,15 @@ const Home = () => {
           {cards.map((item) => (
             <motion.div
               key={item.subtitle}
-              className="w-[320px] sm:w-[500px] h-[250px] sm:h-[300px] bg-[rgba(23,37,84,0.9)] rounded-xl p-5 border-2 border-[rgba(74,36,157,0.5)] shadow-xl hover:shadow-[0_0_15px_rgba(147,51,234,0.6)] transition-shadow duration-500 flex flex-col justify-between items-start relative overflow-hidden"
+              className="w-[320px] sm:w-[500px] h-[250px] sm:h-[300px] bg-[rgba(23,37,84,0.6)] rounded-xl p-5 border-2 border-[rgba(74,36,157,0.5)] shadow-xl hover:shadow-[0_0_15px_rgba(147,51,234,0.6)] transition-shadow duration-500 flex flex-col justify-between items-start relative overflow-hidden"
               variants={childVariants}
               whileHover={{ scale: 1.02 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[rgba(74,36,157,0.1)] via-[rgba(23,37,84,0.1)] to-[rgba(147,51,234,0.1)] opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-              <div className="relative z-10 text-purple-300 border border-[rgba(147,51,234,0.4)] rounded-md inline-block px-3 py-1 bg-[rgba(17,24,39,0.8)] shadow-md shadow-[rgba(147,51,234,0.2)]">
+              <div className="relative z-10 text-purple-300 border border-[rgba(147,51,234,0.4)] rounded-md inline-block px-3 py-1 bg-[rgba(17,24,39,0.5)] shadow-md shadow-[rgba(147,51,234,0.2)]">
                 {item.company_name}
               </div>
-              <div className="relative z-10 rounded-xl max-w-[300px] space-y-3 p-3 bg-[rgba(31,41,55,0.9)] border border-[rgba(74,36,157,0.5)] shadow-inner shadow-[rgba(0,0,0,0.4)]">
+              <div className="relative z-10 rounded-xl max-w-[300px] space-y-3 p-3 bg-[rgba(31,41,55,0.7)] border border-[rgba(74,36,157,0.5)] shadow-inner shadow-[rgba(0,0,0,0.4)]">
                 <p
                   className="text-2xl text-gray-100 font-semibold tracking-tight"
                   style={{ textShadow: "0 0 5px rgba(147,51,234,0.7)" }}
