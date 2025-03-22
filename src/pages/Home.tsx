@@ -66,7 +66,7 @@ const Home = () => {
     <main className="space-y-20 sm:space-y-40">
       <motion.section
         id="about"
-        className="min-h-[80vh] p-6 sm:p-10 flex flex-col justify-center items-center space-y-5 sm:space-y-6 relative overflow-hidden mt-5"
+        className="min-h-[80vh] relative flex flex-col justify-center items-center space-y-5 sm:space-y-6 overflow-hidden mt-5"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
