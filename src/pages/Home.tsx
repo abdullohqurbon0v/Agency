@@ -80,13 +80,13 @@ const Home = () => {
           viewport={{ amount: 0.3 }}
         >
           <motion.h1
-            className="text-2xl md:text-4xl lg:text-5xl font-bold text-white max-w-[100%] sm:max-w-3xl bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-center"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold text-white max-w-[100%] sm:max-w-5xl bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-center"
             variants={childVariants}
           >
             Turn Clicks into Customers, and Customers into Brand Loyalist
           </motion.h1>
           <motion.p
-            className="text-base sm:text-lg md:text-xl text-gray-200  text-center max-w-3xl"
+            className="text-base sm:text-lg md:text-3xl text-gray-200  text-center max-w-5xl mx-auto"
             variants={childVariants}
           >
             We drive traffic,increase conversesions, and scale your online store
@@ -165,7 +165,52 @@ const Home = () => {
         id="process"
         className="min-h-screen p-6 sm:p-10 bg-[rgba(74,36,157,0.1)]"
       >
-        <div></div>
+        <div className="max-w-[1650px] mx-auto flex flex-col space-y-5 items-center">
+          <p className="text-center text-7xl">
+            VestraX is the proven e-commerce growth partner for Sports apparel &
+            equipment brands ready to power past 8 figures
+          </p>
+          <div className="">
+            <button className="px-6 py-4 bg-black rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 cursor-pointer transition-shadow duration-300 ">
+              Book Your Free Demo
+            </button>
+          </div>
+        </div>
+        <div className="flex max-w-[1650px] mx-auto">
+          <div className="w-2/4"></div>
+          <div>
+            <h4>About VestraX</h4>
+            <p>Strategize, Optimize, Dominate</p>
+            <p>
+              The sports apparel and equipment industry is crowded, making it
+              tough for brands to stand out and reach the next revenue
+              milestone. Many businesses struggle with inconsistent sales,
+              rising ad costs, and fierce competition.
+            </p>
+            <p>
+              Without a specialized marketing strategy, even the most innovative
+              products can get lost in the noise. Brands end up wasting money on
+              poorly targeted ads, while missing out on loyal, lifelong fans.
+            </p>
+            <p>
+              At VestraX, we combine data-driven insights with our passion for
+              sports to help you scale efficiently. Our targeted ad campaigns,
+              conversion optimization, and influencer partnerships ensure your
+              brand thrives in a hyper-competitive market—helping you move past
+              6- or 7-figure ceilings and onto 8-figure success.
+            </p>
+            <p>Why Sports?</p>
+            <p>
+              Our team is made up of former athletes, fitness enthusiasts, and
+              marketing pros who understand the mindset of sports consumers.
+              We’ve seen firsthand how community, authenticity, and performance
+              drive purchasing decisions in this space. We chose this niche
+              because we believe in empowering brands that encourage active,
+              healthy lifestyles.
+            </p>
+            <button>Book Your Free Demo</button>
+          </div>
+        </div>
       </section>
 
       <section
@@ -176,6 +221,7 @@ const Home = () => {
         <p className="text-base sm:text-lg text-gray-200 mt-2">
           This is the Blog section.
         </p>
+        <div></div>
       </section>
 
       <section

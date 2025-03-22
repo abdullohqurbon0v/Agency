@@ -1,6 +1,5 @@
 import { motion, Variants } from "framer-motion";
 import { Button } from "../ui/button";
-import { ModeToggle } from "./mode-toggle";
 import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Menu } from "lucide-react";
@@ -140,9 +139,7 @@ const Navbar = () => {
             variants={buttonContainerVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-          >
-            <ModeToggle />
-          </motion.div>
+          ></motion.div>
         </motion.nav>
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
@@ -164,7 +161,7 @@ const Navbar = () => {
                     href={href}
                     onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                       e.preventDefault();
-                      handleNavClick(href); // Вызов обработчика с закрытием Sheet
+                      handleNavClick(href);
                     }}
                     className={`text-lg ${
                       activeLink === href ? "font-bold" : ""
@@ -177,9 +174,6 @@ const Navbar = () => {
               <Button className="shadow-md hover:shadow-lg transition-shadow">
                 Get A Demo
               </Button>
-              <div className="mt-4">
-                <ModeToggle />
-              </div>
             </nav>
           </SheetContent>
         </Sheet>
