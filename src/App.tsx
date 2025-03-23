@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <div className="w-full pt-20 min-w-[100vw] overflow-x-hidden">
+    <div className="pt-16 sm:pt-20">
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
