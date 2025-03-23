@@ -4,8 +4,10 @@ import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <div className="pt-16 sm:pt-20">
-      <Navbar />
+    <div>
+      <header className="h-[16vh] bg-[#110e19] z-40 overflow-hidden">
+        <Navbar />
+      </header>
       <Routes>
         <Route index element={<Home />} />
 

@@ -15,17 +15,20 @@ interface CardType {
 const cards: CardType[] = [
   {
     subtitle: "/1.png",
-    description: "Initial planning and strategy development for the project.",
+    description:
+      "We maximize your Return on Ad Spend (ROAS) by leveraging audience insights, retargeting, and performance analytics to drive measurable profit.",
     company_name: "ROI-Driven Advertising",
   },
   {
     subtitle: "/2.png",
-    description: "Market research and analysis to identify opportunities.",
+    description:
+      "No guessing—just results. Our AI-powered analytics, market research, and A/B testing create adaptive campaigns for sustainable growth.",
     company_name: "Data-Backed Growth Strategies",
   },
   {
     subtitle: "/3.png",
-    description: "Design and prototyping of key features and interfaces.",
+    description:
+      "We fine-tune every step of your sales funnel to boost conversion rates and drive more revenue.",
     company_name: "Conversion Rate Optimization (CRO)",
   },
   {
@@ -134,7 +137,7 @@ const Home = () => {
     <main className="space-y-20 sm:space-y-40 w-full">
       <motion.section
         id="home"
-        className="min-h-[80vh] relative flex flex-col justify-center items-center space-y-5 sm:space-y-6 overflow-hidden mt-5"
+        className="min-h-[80vh] relative flex flex-col justify-center items-center space-y-5 sm:space-y-6 overflow-hidden "
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -176,6 +179,7 @@ const Home = () => {
             Book in your free Demo
           </motion.button>
         </motion.div>
+        <div className="absolute bottom-0 left-0 w-full h-[100px] bg-transparent backdrop-blur-md z-10"></div>
       </motion.section>
       <motion.section
         id="services"
@@ -226,21 +230,22 @@ const Home = () => {
               viewport={{ once: false, amount: 0.3 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[rgba(74,36,157,0.1)] via-[rgba(23,37,84,0.1)] to-[rgba(147,51,234,0.1)] opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-              <img src={item.subtitle} />
+              <img
+                src={item.subtitle}
+                alt={item.company_name}
+                className="w-20"
+              />
               <motion.div
-                className="relative z-10 font-semibold  rounded-md inline-block px-2 sm:px-3 py-1   text-xs sm:text-sm"
+                className="relative z-10 font-semibold rounded-md inline-block px-2 sm:px-3 py-1 text-xs sm:text-2xl hover:drop-shadow-md text-white description"
                 variants={childVariants}
               >
                 {item.company_name}
               </motion.div>
               <motion.div
-                className="relative z-10 rounded-xl max-w-[90%] space-y-2 sm:space-y-3 p-3 "
+                className="relative z-10 rounded-xl max-w-[90%] space-y-2 sm:space-y-3 p-3"
                 variants={childVariants}
               >
-                <p
-                  className="text-xl w-full leading-relaxed text-white "
-                  style={{ textShadow: "0 0 3px rgba(0,0,0,0.5)" }}
-                >
+                <p className="text-sm w-full leading-relaxed text-white hover:drop-shadow-md">
                   {item.description}
                 </p>
               </motion.div>
@@ -285,7 +290,7 @@ const Home = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.div
-          className="max-w-[1650px] mx-auto flex flex-col md:flex-row gap-8 mt-96"
+          className="max-w-[1650px] mx-auto flex flex-col md:flex-row gap-8 mt-32"
           variants={containerVariants}
         >
           <motion.div

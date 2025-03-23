@@ -113,6 +113,21 @@
 ::-webkit-scrollbar {
   height: 0;
 }
+.text-hover-shadow:hover {
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.img-shadow {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+.shadowtext {
+  text-shadow: 0px 0px 6px rgb(0, 47, 255);
+}
+.description:hover {
+  text-shadow: 2px 0px 12px rgb(0, 42, 228), -2px 0px 12px rgb(0, 41, 224);
+  color: #534f9c;
+  transition: all 0.2s ease;
+}
 
 @layer base {
   * {
