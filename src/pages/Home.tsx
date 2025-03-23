@@ -143,7 +143,7 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
-        <video
+        {/* <video
           autoPlay
           loop
           muted
@@ -152,7 +152,7 @@ const Home = () => {
         >
           <source src="/4408477.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
         <motion.div
           className="flex flex-col space-y-6 items-center relative z-10"
           variants={containerVariants}
@@ -179,7 +179,6 @@ const Home = () => {
             Book in your free Demo
           </motion.button>
         </motion.div>
-        <div className="absolute bottom-0 left-0 w-full h-[100px] bg-transparent backdrop-blur-md z-10"></div>
       </motion.section>
       <motion.section
         id="services"
