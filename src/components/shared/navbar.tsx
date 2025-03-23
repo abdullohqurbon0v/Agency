@@ -3,7 +3,6 @@ import { Button } from "../ui/button";
 import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Menu } from "lucide-react";
-import logo from "../../icons/logo.png";
 
 const navItemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -101,7 +100,7 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <img src={logo} alt="Logo" />
+          <img src={"/logo.png"} alt="Logo" />
         </motion.p>
         <motion.nav
           className="hidden md:flex space-x-7 items-center"

@@ -5,11 +5,6 @@ import {
   RiShakeHandsLine,
   RiTeamLine,
 } from "react-icons/ri";
-import image1 from "../icons/1.png";
-import image2 from "../icons/2.png";
-import image3 from "../icons/3.png";
-import image4 from "../icons/4.png";
-import image5 from "../icons/5.png";
 
 interface CardType {
   subtitle: string;
@@ -19,28 +14,28 @@ interface CardType {
 
 const cards: CardType[] = [
   {
-    subtitle: image1,
+    subtitle: "/1.png",
     description: "Initial planning and strategy development for the project.",
     company_name: "ROI-Driven Advertising",
   },
   {
-    subtitle: image2,
+    subtitle: "/2.png",
     description: "Market research and analysis to identify opportunities.",
     company_name: "Data-Backed Growth Strategies",
   },
   {
-    subtitle: image3,
+    subtitle: "/3.png",
     description: "Design and prototyping of key features and interfaces.",
     company_name: "Conversion Rate Optimization (CRO)",
   },
   {
-    subtitle: image4,
+    subtitle: "/4.png",
     description:
       "Leverage authentic, user-generated content and influencer partnerships to build trust and spark engagement with your brand.",
     company_name: "Influencer & UGC Marketing",
   },
   {
-    subtitle: image5,
+    subtitle: "/5.png",
     description:
       "Your Growth, Our Priority. Our team of marketing veterans is committed to your growth. With tailored strategies and hands-on support, we help you scale efficiently and effectively.",
     company_name: "Testing, QA, and performance optimization.",
