@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Menu } from "lucide-react";
+import logo from "../../icons/logo.png";
 
 const navItemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -45,7 +46,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState<string>("");
   const [isSheetOpen, setIsSheetOpen] = useState<boolean>(false);
 
-  const navItems: string[] = ["About", "Services", "Process", "Team", "FAQ"];
+  const navItems: string[] = ["Home", "Services", "Process", "About", "FAQ"];
   const hrefs: string[] = navItems.map(
     (item) => `#${item.toLowerCase().replace(" ", "-")}`
   );
@@ -100,7 +101,7 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          Spheric
+          <img src={logo} alt="Logo" />
         </motion.p>
         <motion.nav
           className="hidden md:flex space-x-7 items-center"

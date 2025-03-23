@@ -8,6 +8,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
+
         <Route />
       </Routes>
     </div>

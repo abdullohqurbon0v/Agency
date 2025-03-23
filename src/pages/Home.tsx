@@ -1,4 +1,15 @@
 import { motion } from "framer-motion";
+import {
+  RiBarChartLine,
+  RiComputerLine,
+  RiShakeHandsLine,
+  RiTeamLine,
+} from "react-icons/ri";
+import image1 from "../icons/1.png";
+import image2 from "../icons/2.png";
+import image3 from "../icons/3.png";
+import image4 from "../icons/4.png";
+import image5 from "../icons/5.png";
 
 interface CardType {
   subtitle: string;
@@ -8,38 +19,34 @@ interface CardType {
 
 const cards: CardType[] = [
   {
-    subtitle: "Process Part 1",
+    subtitle: image1,
     description: "Initial planning and strategy development for the project.",
-    company_name: "Acme Corp",
+    company_name: "ROI-Driven Advertising",
   },
   {
-    subtitle: "Process Part 2",
+    subtitle: image2,
     description: "Market research and analysis to identify opportunities.",
-    company_name: "Insight Analytics",
+    company_name: "Data-Backed Growth Strategies",
   },
   {
-    subtitle: "Process Part 3",
+    subtitle: image3,
     description: "Design and prototyping of key features and interfaces.",
-    company_name: "Creative Labs",
+    company_name: "Conversion Rate Optimization (CRO)",
   },
   {
-    subtitle: "Process Part 4",
-    description: "Development and implementation of core functionalities.",
-    company_name: "DevSolutions Inc.",
+    subtitle: image4,
+    description:
+      "Leverage authentic, user-generated content and influencer partnerships to build trust and spark engagement with your brand.",
+    company_name: "Influencer & UGC Marketing",
   },
   {
-    subtitle: "Process Part 5",
-    description: "Testing, QA, and performance optimization.",
-    company_name: "Quality First",
-  },
-  {
-    subtitle: "Process Part 6",
-    description: "Deployment, monitoring, and post-launch support.",
-    company_name: "LaunchPad Systems",
+    subtitle: image5,
+    description:
+      "Your Growth, Our Priority. Our team of marketing veterans is committed to your growth. With tailored strategies and hands-on support, we help you scale efficiently and effectively.",
+    company_name: "Testing, QA, and performance optimization.",
   },
 ];
 
-// Animation Variants
 const sectionVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -102,10 +109,36 @@ const cardVariants = {
 };
 
 const Home = () => {
+  const work = [
+    {
+      icon: RiTeamLine,
+      title: "Performance Mindset",
+      description:
+        "We operate like athletes—constantly striving for peak performance. Every campaign is approached with discipline, focus, and the drive to win.",
+    },
+    {
+      icon: RiBarChartLine,
+      title: "Data-Driven Execution",
+      description:
+        "We base decisions on actionable insights and performance metrics, ensuring every move we make is optimized for maximum ROI.",
+    },
+    {
+      icon: RiShakeHandsLine,
+      title: "Transparent Collaboration",
+      description:
+        "We believe in open communication and real-time reporting, so you’re never left guessing. We’re a partner, not just a service provider.",
+    },
+    {
+      icon: RiComputerLine,
+      title: "Relentless Innovation",
+      description:
+        "In a fast-paced industry, standing still is not an option. We test new strategies, adopt cutting-edge tools, and constantly refine our approach to stay ahead of the competition.",
+    },
+  ];
   return (
     <main className="space-y-20 sm:space-y-40 w-full">
       <motion.section
-        id="about"
+        id="home"
         className="min-h-[80vh] relative flex flex-col justify-center items-center space-y-5 sm:space-y-6 overflow-hidden mt-5"
         variants={sectionVariants}
         initial="hidden"
@@ -157,7 +190,6 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
-        {/* Left Column */}
         <motion.div
           className="space-y-4 w-full lg:w-1/2 sticky top-20 lg:top-80"
           variants={containerVariants}
@@ -191,7 +223,7 @@ const Home = () => {
           {cards.map((item) => (
             <motion.div
               key={item.subtitle}
-              className="w-full max-w-[500px] h-[220px] sm:h-[250px] lg:h-[300px] bg-[rgba(23,37,84,0.6)] rounded-xl p-4 sm:p-5 transition-shadow duration-500 flex flex-col justify-between items-start relative overflow-hidden mx-auto"
+              className="w-full max-w-[500px] bg-[rgba(23,37,84,0.6)] rounded-xl p-4 sm:p-5 transition-shadow duration-200 flex flex-col justify-between items-start relative overflow-hidden mx-auto space-y-3 hover:shadow-blue-500/80 hover:shadow-2xl hover:border hover:border-blue-800 hover:text-blue-500"
               variants={cardVariants}
               whileHover="hover"
               initial="hidden"
@@ -199,21 +231,19 @@ const Home = () => {
               viewport={{ once: false, amount: 0.3 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[rgba(74,36,157,0.1)] via-[rgba(23,37,84,0.1)] to-[rgba(147,51,234,0.1)] opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+              <img src={item.subtitle} />
               <motion.div
-                className="relative z-10 text-purple-300 border border-[rgba(147,51,234,0.4)] rounded-md inline-block px-2 sm:px-3 py-1 bg-[rgba(17,24,39,0.5)]  text-xs sm:text-sm"
+                className="relative z-10 font-semibold  rounded-md inline-block px-2 sm:px-3 py-1   text-xs sm:text-sm"
                 variants={childVariants}
               >
                 {item.company_name}
               </motion.div>
               <motion.div
-                className="relative z-10 rounded-xl max-w-[90%] sm:max-w-[300px] space-y-2 sm:space-y-3 p-3 bg-[rgba(31,41,55,0.7)] border "
+                className="relative z-10 rounded-xl max-w-[90%] space-y-2 sm:space-y-3 p-3 "
                 variants={childVariants}
               >
-                <p className="text-lg sm:text-xl lg:text-2xl text-gray-100 font-semibold tracking-tight">
-                  {item.subtitle}
-                </p>
                 <p
-                  className="text-gray-200 text-xs sm:text-sm leading-relaxed"
+                  className="text-xl w-full leading-relaxed text-white "
                   style={{ textShadow: "0 0 3px rgba(0,0,0,0.5)" }}
                 >
                   {item.description}
@@ -224,20 +254,16 @@ const Home = () => {
           ))}
         </motion.div>
       </motion.section>
-      <motion.section
+      <section
         id="process"
-        className="min-h-screen p-6 sm:p-10"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        className="min-h-screen p-6 sm:p-10 flex items-center justify-center"
       >
         <motion.div
           className="max-w-[1650px] mx-auto flex flex-col space-y-5 items-center"
           variants={containerVariants}
         >
           <motion.p
-            className="text-center text-4xl sm:text-5xl font-bold"
+            className="text-center text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-200 to-blue-300 bg-clip-text tracking-tight text-transparent"
             variants={childVariants}
           >
             VestraX is the proven e-commerce growth partner for Sports apparel &
@@ -245,7 +271,7 @@ const Home = () => {
           </motion.p>
           <motion.div variants={childVariants}>
             <motion.button
-              className="px-6 py-4 bg-black text-white rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300"
+              className="px-6 py-4 bg-black text-white rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300 cursor-pointer"
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"
@@ -254,7 +280,15 @@ const Home = () => {
             </motion.button>
           </motion.div>
         </motion.div>
-
+      </section>
+      <motion.section
+        id="about"
+        className="min-h-screen p-6 sm:p-10"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <motion.div
           className="max-w-[1650px] mx-auto flex flex-col md:flex-row gap-8 mt-96"
           variants={containerVariants}
@@ -262,7 +296,9 @@ const Home = () => {
           <motion.div
             className="w-full md:w-1/2 bg-gray-200 h-64 md:h-auto"
             variants={childVariants}
-          ></motion.div>
+          >
+            <img src="" alt="" />
+          </motion.div>
           <motion.div className="w-full md:w-1/3" variants={containerVariants}>
             <motion.h4
               className="text-xl font-semibold mb-2"
@@ -317,49 +353,46 @@ const Home = () => {
           </motion.div>
         </motion.div>
       </motion.section>
+
       <motion.section
         id="team"
-        className="min-h-screen p-6 sm:p-10 bg-[rgba(23,37,84,0.1)]"
+        className="p-6 sm:p-10 mt-96"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
       >
         <motion.h1
-          className="text-2xl sm:text-3xl font-bold text-white"
+          className="text-2xl sm:text-3xl font-bold text-center "
           variants={childVariants}
         >
-          Blog
+          Our Work Philosophy
         </motion.h1>
-        <motion.p
-          className="text-base sm:text-lg text-gray-200 mt-2"
-          variants={childVariants}
-        >
-          This is the Blog section.
-        </motion.p>
-        <motion.div variants={childVariants}></motion.div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          {work.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={index}
+                className={`flex flex-col items-center text-center p-4`}
+                variants={childVariants}
+              >
+                <Icon className="text-4xl  mb-4" />
+                <h2 className="text-lg font-bold  mb-2">{item.title}</h2>
+                <p className="text-sm ">{item.description}</p>
+              </motion.div>
+            );
+          })}
+        </div>
       </motion.section>
       <motion.section
-        id="faq"
-        className="min-h-screen p-6 sm:p-10 bg-[rgba(74,36,157,0.1)]"
+        id="work-philosophy"
+        className="min-h-screen p-6 "
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
-      >
-        <motion.h1
-          className="text-2xl sm:text-3xl font-bold text-white"
-          variants={childVariants}
-        >
-          Blog
-        </motion.h1>
-        <motion.p
-          className="text-base sm:text-lg text-gray-200 mt-2"
-          variants={childVariants}
-        >
-          This is the Blog section.
-        </motion.p>
-      </motion.section>
+      ></motion.section>
     </main>
   );
 };
