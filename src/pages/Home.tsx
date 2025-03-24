@@ -143,6 +143,16 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover "
+        >
+          <source src="/4408477.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <motion.div
           className="flex flex-col space-y-6 items-center relative z-10 pt-44"
           variants={containerVariants}
