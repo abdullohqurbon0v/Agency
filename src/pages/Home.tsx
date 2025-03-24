@@ -137,7 +137,7 @@ const Home = () => {
     <main className="space-y-20 sm:space-y-40 w-full">
       <motion.section
         id="home"
-        className="min-h-[80vh] relative flex flex-col justify-center items-center space-y-5 sm:space-y-6 overflow-hidden"
+        className="min-h-[80vh] relative flex flex-col justify-center items-center space-y-5 sm:space-y-6 "
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -148,7 +148,7 @@ const Home = () => {
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover "
+          className="absolute top-0 left-0 w-full h-[90vh] object-cover "
         >
           <source src="/4408477.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -189,11 +189,11 @@ const Home = () => {
         viewport={{ once: false, amount: 0.2 }}
       >
         <motion.div
-          className="space-y-4 w-full lg:w-1/2 md:sticky top-20 lg:top-80"
+          className="space-y-4 w-full lg:w-1/2 block md:sticky top-20 lg:top-80"
           variants={containerVariants}
         >
           <motion.h1
-            className="text-3xl sm:text-4xl lg:text-6xl bg-gradient-to-r from-purple-200 to-blue-300 bg-clip-text tracking-tight text-transparent font-bold drop-shadow-lg"
+            className="text-3xl sm:text-4xl lg:text-6xl bg-gradient-to-r from-purple-200 to-blue-300 bg-clip-text tracking-tight text-transparent font-bold drop-shadow-lg mt-32"
             variants={childVariants}
           >
             Your Getaway to Infinite Possibilities
@@ -202,11 +202,11 @@ const Home = () => {
             className="text-gray-200 text-sm sm:text-base lg:text-lg mb-4 drop-shadow-md max-w-md"
             variants={childVariants}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            exercitationem fugit odit explicabo deserunt ipsum.
+            We help brands optimize their digital presence and maximize revenue
+            through advanced marketing strategies.
           </motion.p>
           <motion.button
-            className="px-4 py-2 bg-[rgba(23,37,84,0.9)] text-purple-300 rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300 text-sm sm:text-base"
+            className="px-4 py-2 bg-[rgba(23,37,84,0.9)] text-white cursor-pointer rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300 text-sm sm:text-base"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
