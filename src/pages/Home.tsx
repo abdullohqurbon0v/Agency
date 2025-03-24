@@ -143,7 +143,7 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
-        {/* <video
+        <video
           autoPlay
           loop
           muted
@@ -152,7 +152,7 @@ const Home = () => {
         >
           <source src="/4408477.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
+        </video>
         <motion.div
           className="flex flex-col space-y-6 items-center relative z-10"
           variants={containerVariants}
@@ -282,7 +282,7 @@ const Home = () => {
       </section>
       <motion.section
         id="about"
-        className="min-h-screen p-6 sm:p-10"
+        className="min-h-screen p-6 sm:p-10 z-50"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
