@@ -18,7 +18,7 @@ const Root = () => {
   return (
     <StrictMode>
       <BrowserRouter>
-        <div className="relative min-h-screen bg-[#110e19]">
+        <div className="relative min-h-screen">
           <ThemeProvider>
             <App />
           </ThemeProvider>

@@ -137,24 +137,14 @@ const Home = () => {
     <main className="space-y-20 sm:space-y-40 w-full">
       <motion.section
         id="home"
-        className="min-h-[80vh] relative flex flex-col justify-center items-center space-y-5 sm:space-y-6 overflow-hidden "
+        className="min-h-[80vh] relative flex flex-col justify-center items-center space-y-5 sm:space-y-6 overflow-hidden"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-70 z-0"
-        >
-          <source src="/4408477.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
         <motion.div
-          className="flex flex-col space-y-6 items-center relative z-10"
+          className="flex flex-col space-y-6 items-center relative z-10 pt-44"
           variants={containerVariants}
         >
           <motion.h1
@@ -189,7 +179,7 @@ const Home = () => {
         viewport={{ once: false, amount: 0.2 }}
       >
         <motion.div
-          className="space-y-4 w-full lg:w-1/2 sticky top-20 lg:top-80"
+          className="space-y-4 w-full lg:w-1/2 md:sticky top-20 lg:top-80"
           variants={containerVariants}
         >
           <motion.h1
@@ -221,7 +211,7 @@ const Home = () => {
           {cards.map((item) => (
             <motion.div
               key={item.subtitle}
-              className="w-full max-w-[500px] bg-[rgba(23,37,84,0.6)] rounded-xl p-4 sm:p-5 transition-shadow duration-200 flex flex-col justify-between items-start relative overflow-hidden mx-auto space-y-3 hover:shadow-blue-500/80 hover:shadow-2xl hover:border hover:border-blue-800 hover:text-blue-500"
+              className="w-full max-w-[500px] bg-[rgba(23,37,84,0.6)] rounded-xl p-4 sm:p-5 transition-shadow duration-200 flex flex-col justify-between items-start relative overflow-hidden mx-auto space-y-3 hover:shadow-blue-500/80 hover:shadow-2xl hover:border hover:border-blue-800 hover:text-blue-500 description"
               variants={cardVariants}
               whileHover="hover"
               initial="hidden"
@@ -235,7 +225,7 @@ const Home = () => {
                 className="w-20"
               />
               <motion.div
-                className="relative z-10 font-semibold rounded-md inline-block px-2 sm:px-3 py-1 text-xs sm:text-2xl hover:drop-shadow-md text-white description"
+                className="relative z-10 font-semibold rounded-md inline-block px-2 sm:px-3 py-1 text-xs sm:text-2xl hover:drop-shadow-md  "
                 variants={childVariants}
               >
                 {item.company_name}
@@ -282,7 +272,7 @@ const Home = () => {
       </section>
       <motion.section
         id="about"
-        className="min-h-screen p-6 sm:p-10 z-50"
+        className="min-h-screen p-6 sm:p-10 z-50 opacity-100"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -305,7 +295,7 @@ const Home = () => {
             >
               About VestraX
             </motion.h4>
-            <motion.p className="font-medium mb-4" variants={childVariants}>
+            <motion.p className="font-medium mb-4 " variants={childVariants}>
               Strategize, Optimize, Dominate
             </motion.p>
             <motion.p className="mb-4" variants={childVariants}>
@@ -352,17 +342,16 @@ const Home = () => {
           </motion.div>
         </motion.div>
       </motion.section>
-
       <motion.section
-        id="team"
-        className="p-6 sm:p-10 mt-96"
+        id="philasophy"
+        className="p-6 sm:p-10 mt-96 "
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
       >
         <motion.h1
-          className="text-2xl sm:text-3xl font-bold text-center "
+          className="text-2xl sm:text-3xl font-bold text-center mt-56"
           variants={childVariants}
         >
           Our Work Philosophy
