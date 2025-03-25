@@ -125,7 +125,7 @@
 }
 .description:hover {
   text-shadow: 2px 0px 12px rgb(0, 42, 228), -2px 0px 12px rgb(0, 41, 224);
-  color: #534f9c;
+  color: #0af7ff;
   transition: all 0.2s ease;
 }
 
