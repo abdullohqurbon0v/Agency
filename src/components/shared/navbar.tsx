@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Menu } from "lucide-react";
+import { ModeToggle } from "./mode-toggle";
 
 const navItemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },

@@ -5,6 +5,12 @@ import {
   RiShakeHandsLine,
   RiTeamLine,
 } from "react-icons/ri";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../components/ui/accordion";
 
 interface CardType {
   subtitle: string;
@@ -384,13 +390,64 @@ const Home = () => {
         </div>
       </motion.section>
       <motion.section
-        id="work-philosophy"
-        className="min-h-screen p-6 "
+        id="faq"
+        className="min-h-screen  max-w-[800px] flex flex-col justify-center mx-auto space-y-6"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
-      ></motion.section>
+      >
+        <h1 className="text-center text-4xl font-bold ">
+          Frequently Asked Questions
+        </h1>
+        <p className="text-center text-lg text-gray-600 font-medium">
+          Everything you need to know about our services
+        </p>
+        <Accordion type="single" collapsible className="w-full space-y-4">
+          <AccordionItem
+            value="item-1"
+            className="border border-gray-200 px-5 py-3 rounded-xl shadow-sm  hover:shadow-md transition-shadow"
+          >
+            <AccordionTrigger className="cursor-pointer text-lg font-semibold  transition-colors">
+              How does AI enhance marketing effectiveness?
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-600 mt-2">
+              Our advanced AI algorithms process massive datasets to refine
+              campaign targeting, craft personalized messaging, and optimize
+              delivery timing. This drives higher ROI, reduces customer
+              acquisition costs, and maximizes overall campaign impact.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem
+            value="item-2"
+            className="border border-gray-200 px-5 py-3 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <AccordionTrigger className="cursor-pointer text-lg font-semibold  transition-colors">
+              What sets your agency apart from the competition?
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-600 mt-2">
+              We’re uniquely focused on fitness and recovery brands, blending
+              deep industry knowledge with cutting-edge AI-driven strategies.
+              This combination delivers measurable outcomes and fuels long-term,
+              sustainable growth for our clients.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem
+            value="item-3"
+            className="border border-gray-200 px-5 py-3 rounded-xl shadow-sm  hover:shadow-md transition-shadow"
+          >
+            <AccordionTrigger className="cursor-pointer text-lg font-semibold ">
+              When can we expect to see tangible results?
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-600 mt-2">
+              Many clients notice early improvements within the first 30 days.
+              However, substantial, data-driven results typically emerge within
+              3 months as our strategies fully take effect and adapt to your
+              goals.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </motion.section>
     </main>
   );
 };
