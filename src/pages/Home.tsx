@@ -254,7 +254,6 @@ const Home = () => {
                   {item.description}
                 </p>
               </motion.div>
-              <div className="absolute inset-0 rounded-xl border-2 border-transparent hover:border-[rgba(147,51,234,0.5)] transition-all duration-300 pointer-events-none" />
             </motion.div>
           ))}
         </motion.div>
@@ -391,27 +390,28 @@ const Home = () => {
       </motion.section>
       <motion.section
         id="faq"
-        className="min-h-screen  max-w-[800px] flex flex-col justify-center mx-auto space-y-6"
+        className="min-h-screen max-w-[800px] flex flex-col justify-center mx-auto space-y-6  text-white p-6"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
       >
-        <h1 className="text-center text-4xl font-bold ">
+        <h1 className="text-center text-4xl font-bold text-white">
           Frequently Asked Questions
         </h1>
-        <p className="text-center text-lg text-gray-600 font-medium">
+        <p className="text-center text-lg text-gray-400 font-medium">
           Everything you need to know about our services
         </p>
         <Accordion type="single" collapsible className="w-full space-y-4">
           <AccordionItem
             value="item-1"
-            className="border border-gray-200 px-5 py-3 rounded-xl shadow-sm  hover:shadow-md transition-shadow"
+            className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
           >
-            <AccordionTrigger className="cursor-pointer text-lg font-semibold  transition-colors">
+            <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
               How does AI enhance marketing effectiveness?
+              <span className="accordion-arrow" />
             </AccordionTrigger>
-            <AccordionContent className="text-gray-600 mt-2">
+            <AccordionContent className="text-gray-300 mt-2">
               Our advanced AI algorithms process massive datasets to refine
               campaign targeting, craft personalized messaging, and optimize
               delivery timing. This drives higher ROI, reduces customer
@@ -420,12 +420,13 @@ const Home = () => {
           </AccordionItem>
           <AccordionItem
             value="item-2"
-            className="border border-gray-200 px-5 py-3 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
           >
-            <AccordionTrigger className="cursor-pointer text-lg font-semibold  transition-colors">
+            <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
               What sets your agency apart from the competition?
+              <span className="accordion-arrow" />
             </AccordionTrigger>
-            <AccordionContent className="text-gray-600 mt-2">
+            <AccordionContent className="text-gray-300 mt-2">
               We’re uniquely focused on fitness and recovery brands, blending
               deep industry knowledge with cutting-edge AI-driven strategies.
               This combination delivers measurable outcomes and fuels long-term,
@@ -434,16 +435,47 @@ const Home = () => {
           </AccordionItem>
           <AccordionItem
             value="item-3"
-            className="border border-gray-200 px-5 py-3 rounded-xl shadow-sm  hover:shadow-md transition-shadow"
+            className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
           >
-            <AccordionTrigger className="cursor-pointer text-lg font-semibold ">
+            <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
               When can we expect to see tangible results?
+              <span className="accordion-arrow" />
             </AccordionTrigger>
-            <AccordionContent className="text-gray-600 mt-2">
+            <AccordionContent className="text-gray-300 mt-2">
               Many clients notice early improvements within the first 30 days.
               However, substantial, data-driven results typically emerge within
               3 months as our strategies fully take effect and adapt to your
               goals.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem
+            value="item-4"
+            className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
+          >
+            <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
+              Do you offer guaranteed results?
+              <span className="accordion-arrow" />
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-300 mt-2">
+              While we cannot guarantee specific outcomes due to market
+              variables, our data-driven approach and proven strategies are
+              designed to maximize your success. We work closely with you to set
+              realistic goals and deliver measurable progress.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem
+            value="item-5"
+            className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
+          >
+            <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
+              What’s your pricing structure?
+              <span className="accordion-arrow" />
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-300 mt-2">
+              Our pricing is tailored to your specific needs and goals. We offer
+              flexible plans, including monthly retainers and project-based
+              fees, ensuring you get the best value for your investment. Contact
+              us for a personalized quote.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
