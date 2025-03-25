@@ -129,6 +129,10 @@
   transition: all 0.2s ease;
 }
 
+.description div:last-child {
+  text-shadow: none;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

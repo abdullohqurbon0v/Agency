@@ -241,16 +241,16 @@ const Home = () => {
                 className="w-20"
               />
               <motion.div
-                className="relative z-10 font-semibold rounded-md inline-block px-2 sm:px-3 py-1 text-xs sm:text-2xl hover:drop-shadow-md  "
+                className="relative z-10 font-semibold rounded-md inline-block px-2 sm:px-3 py-1 text-xs sm:text-2xl hover:drop-shadow-md "
                 variants={childVariants}
               >
-                {item.company_name}
+                <p>{item.company_name}</p>
               </motion.div>
               <motion.div
                 className="relative z-10 rounded-xl max-w-[90%] space-y-2 sm:space-y-3 p-3"
                 variants={childVariants}
               >
-                <p className="text-sm w-full leading-relaxed text-white hover:drop-shadow-md">
+                <p className="text-sm w-full text-white shadow-none  drop-shadow-none">
                   {item.description}
                 </p>
               </motion.div>
