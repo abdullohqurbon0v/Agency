@@ -291,7 +291,7 @@ const Home = () => {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
       >
         <motion.div
           className="max-w-[1650px] mx-auto flex flex-col md:flex-row gap-8 mt-32"
