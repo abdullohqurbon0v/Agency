@@ -258,9 +258,13 @@ const Home = () => {
           ))}
         </motion.div>
       </motion.section>
-      <section
+      <motion.section
         id="process"
         className="min-h-screen p-6 sm:p-10 flex items-center justify-center"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
       >
         <motion.div
           className="max-w-[1650px] mx-auto flex flex-col space-y-5 items-center"
@@ -284,7 +288,7 @@ const Home = () => {
             </motion.button>
           </motion.div>
         </motion.div>
-      </section>
+      </motion.section>
       <motion.section
         id="about"
         className="min-h-screen p-6 sm:p-10 z-50 opacity-100"
