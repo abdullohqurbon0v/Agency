@@ -101,7 +101,6 @@ const letterVariants = {
   },
 };
 
-// Варианты анимации для параграфов
 const paragraphVariants = {
   hidden: { opacity: 0, y: 15 },
   visible: {
