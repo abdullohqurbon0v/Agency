@@ -301,7 +301,14 @@ const Home = () => {
             className="w-full md:w-1/2 bg-gray-200 h-64 md:h-auto"
             variants={childVariants}
           >
-            <img src="" alt="" />
+            <video
+              src="about.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
           </motion.div>
           <motion.div className="w-full md:w-1/3" variants={containerVariants}>
             <motion.h4
