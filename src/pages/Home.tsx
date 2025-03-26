@@ -1,4 +1,4 @@
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   RiBarChartLine,
   RiComputerLine,
@@ -12,7 +12,6 @@ import {
   AccordionTrigger,
 } from "../components/ui/accordion";
 
-// Тип для карточек
 interface CardType {
   subtitle: string;
   description: string;
