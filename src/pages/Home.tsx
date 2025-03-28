@@ -11,6 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../components/ui/accordion";
+import { Separator } from "../components/ui/separator";
 
 interface CardType {
   subtitle: string;
@@ -57,10 +58,10 @@ const sectionVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.5,
       ease: "easeOut",
       when: "beforeChildren",
-      staggerChildren: 0.2,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -71,9 +72,9 @@ const containerVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
       ease: "easeOut",
-      staggerChildren: 0.3,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -84,7 +85,7 @@ const childVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
       ease: "easeOut",
     },
   },
@@ -95,9 +96,9 @@ const buttonVariants = {
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.3, ease: "easeOut" },
   },
-  hover: { scale: 1.05, transition: { duration: 0.3 } },
+  hover: { scale: 1.05, transition: { duration: 0.2 } },
   tap: { scale: 0.95 },
 };
 
@@ -107,9 +108,9 @@ const cardVariants = {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.4, ease: "easeOut" },
   },
-  hover: { scale: 1.02, transition: { duration: 0.3 } },
+  hover: { scale: 1.02, transition: { duration: 0.2 } },
 };
 
 const Home = () => {
@@ -419,14 +420,15 @@ const Home = () => {
             className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
           >
             <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
-              How does AI enhance marketing effectiveness?
+              What industries do you specialize in?
               <span className="accordion-arrow" />
             </AccordionTrigger>
             <AccordionContent className="text-gray-300 mt-2">
-              Our advanced AI algorithms process massive datasets to refine
-              campaign targeting, craft personalized messaging, and optimize
-              delivery timing. This drives higher ROI, reduces customer
-              acquisition costs, and maximizes overall campaign impact.
+              We specialize in sports apparel and equipment brands, helping them
+              scale through data-driven marketing, high-converting ad
+              strategies, and performance optimization. Our expertise ensures
+              brands in the sports industry achieve sustainable growth and
+              maximize ROI.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
@@ -434,14 +436,13 @@ const Home = () => {
             className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
           >
             <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
-              What sets your agency apart from the competition?
+              What makes your approach different from other marketing agencies?
               <span className="accordion-arrow" />
             </AccordionTrigger>
             <AccordionContent className="text-gray-300 mt-2">
-              We’re uniquely focused on fitness and recovery brands, blending
-              deep industry knowledge with cutting-edge AI-driven strategies.
-              This combination delivers measurable outcomes and fuels long-term,
-              sustainable growth for our clients.
+              We combine data-driven strategies, AI-powered optimizations, and
+              hands-on expertise to deliver predictable, scalable growth. Our
+              phased approach ensures sustainable success at every stage.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
@@ -449,14 +450,12 @@ const Home = () => {
             className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
           >
             <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
-              When can we expect to see tangible results?
+              What if I don’t have an existing marketing funnel?
               <span className="accordion-arrow" />
             </AccordionTrigger>
             <AccordionContent className="text-gray-300 mt-2">
-              Many clients notice early improvements within the first 30 days.
-              However, substantial, data-driven results typically emerge within
-              3 months as our strategies fully take effect and adapt to your
-              goals.
+              No problem! We help build and optimize high-converting sales
+              funnels tailored to your audience and business goals. goals.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
@@ -464,14 +463,13 @@ const Home = () => {
             className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
           >
             <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
-              Do you offer guaranteed results?
+              What platforms do you focus on for advertising?
               <span className="accordion-arrow" />
             </AccordionTrigger>
             <AccordionContent className="text-gray-300 mt-2">
-              While we cannot guarantee specific outcomes due to market
-              variables, our data-driven approach and proven strategies are
-              designed to maximize your success. We work closely with you to set
-              realistic goals and deliver measurable progress.
+              We optimize campaigns across Meta (Facebook & Instagram), Google
+              Ads, TikTok, and other high-converting platforms relevant to
+              sports consumers.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
@@ -479,17 +477,162 @@ const Home = () => {
             className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
           >
             <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
-              What’s your pricing structure?
+              How long does it take to see results?
               <span className="accordion-arrow" />
             </AccordionTrigger>
             <AccordionContent className="text-gray-300 mt-2">
-              Our pricing is tailored to your specific needs and goals. We offer
-              flexible plans, including monthly retainers and project-based
-              fees, ensuring you get the best value for your investment. Contact
-              us for a personalized quote.
+              Most clients start seeing measurable improvements within the first
+              30 days. However, significant scaling and long-term profitability
+              happen over the course of 3–6 months.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem
+            value="item-6"
+            className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
+          >
+            <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
+              Do you offer guarantees on performance?
+              <span className="accordion-arrow" />
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-300 mt-2">
+              While we cannot guarantee specific revenue figures, we do
+              guarantee a strategic, data-backed approach to maximize Return on
+              Ad Spend (ROAS) and long-term profitability.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem
+            value="item-7"
+            className="border border-gray-500 px-5 py-3 rounded-lg bg-transparent"
+          >
+            <AccordionTrigger className="cursor-pointer text-lg font-semibold text-white transition-colors flex justify-between items-center w-full">
+              How do I get started?
+              <span className="accordion-arrow" />
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-300 mt-2">
+              Simply reach out for a free consultation, and we’ll map out a game
+              plan tailored to your business goals.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+      </motion.section>
+      <motion.section
+        id="faq"
+        className="min-h-screen max-w-[1200px] flex flex-col justify-center mx-auto space-y-6  text-white p-6"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <h1 className="text-center text-4xl font-bold text-white">
+          YOUR PATH TO SUCCESS
+        </h1>
+        <p className="text-center text-lg text-gray-400 font-medium">
+          We implement a data-driven, performance-oriented approach to ensure
+          scalable and sustainable success.
+        </p>
+        <div className="w-full h-[1220px] flex justify-between mt-16">
+          <div className="text-end w-full px-5">
+            <div className="space-y-5">
+              <p className="font-semibold text-2xl ">
+                Foundation Phase (Week 1)
+              </p>
+              <p className="text-xl tracking-wider">
+                Strategic Onboarding & Setup
+              </p>
+              <p>
+                In this phase, we establish the fundamentals, including defining
+                your Ideal Customer Profile (ICP) and crafting an Irresistible
+                Core Offer.
+              </p>
+              <p>
+                After identifying your target audience, we build a
+                high-converting sales funnel and optimize your website landing
+                page and content.
+              </p>
+              <p>
+                With all elements in place, we launch the first campaign to
+                gather initial insights.
+              </p>
+            </div>
+            <div className="space-y-5 mt-80">
+              <p className="font-semibold text-2xl ">
+                Acceleration Phase (Month 2–3)
+              </p>
+              <p className="text-xl tracking-wider">Scaling & Expansion</p>
+              <p>
+                From traction to takeoff—this is where we scale with confidence.
+              </p>
+              <p>
+                Armed with high-performing data and proven strategies, we
+                increase ad spend, expand audiences, and optimize for sustained
+                growth. Leveraging advanced segmentation and conversion-focused
+                creatives, we drive exponential revenue while maintaining
+                efficiency.
+              </p>
+              <p>
+                By the end of this phase, your brand isn't just growing—it’s
+                accelerating toward market dominance.
+              </p>
+            </div>
+          </div>
+          <Separator orientation="vertical" className="border bg-white" />
+          <div className="text-start w-full px-5">
+            <div className="space-y-5 mt-72">
+              <p className="font-semibold text-2xl ">
+                Optimization Phase (Weeks 2–4)
+              </p>
+              <p className="text-xl tracking-wider">Data-Driven Refinement</p>
+              <p>
+                Turning data into dominance—this is where strategy meets
+                precision.
+              </p>
+              <p>
+                With real-time analytics, A/B testing, and deep audience
+                insights, we refine every aspect of your campaign. From ad
+                creatives to targeting parameters, we optimize for peak
+                performance and maximize Return on Ad Spend (ROAS).
+              </p>
+              <p>
+                By the end of this phase, we’ve eliminated guesswork, fine-tuned
+                your funnel, and built a data-backed formula for scalable
+                success.
+              </p>
+            </div>
+            <div className="space-y-5 mt-80 ">
+              <p className="font-semibold text-2xl ">
+                Domination Phase (Month 4+)
+              </p>
+              <p className="text-xl tracking-wider">
+                Market Leadership & Automation
+              </p>
+              <p>
+                From growth to industry leadership—this is where you take
+                control.
+              </p>
+              <p>
+                With a solid foundation and proven strategies in place, we
+                implement automation, refine high-ROI channels, and establish
+                your brand as a dominant force. Advanced AI-driven optimizations
+                and predictive analytics ensure sustained profitability while
+                minimizing manual effort.
+              </p>
+              <p>
+                At this stage, your business isn’t just scaling—it’s leading the
+                market with unstoppable momentum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <motion.button
+            className="px-6 py-4 bg-black text-white rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300 mt-4 cursor-pointer"
+            variants={buttonVariants}
+            whileHover="hover"
+            whileTap="tap"
+          >
+            Book Your Free Demo
+          </motion.button>
+        </div>
       </motion.section>
     </main>
   );
