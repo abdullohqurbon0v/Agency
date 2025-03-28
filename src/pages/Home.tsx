@@ -517,115 +517,132 @@ const Home = () => {
       </motion.section>
       <motion.section
         id="faq"
-        className="min-h-screen max-w-[1200px] flex flex-col justify-center mx-auto space-y-6  text-white p-6"
+        className="min-h-screen max-w-[1200px] mx-auto px-4 py-8 md:py-12 text-white flex flex-col justify-center space-y-6 md:space-y-8"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
       >
-        <h1 className="text-center text-4xl font-bold text-white">
+        <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold">
           YOUR PATH TO SUCCESS
         </h1>
-        <p className="text-center text-lg text-gray-400 font-medium">
+        <p className="text-center text-base sm:text-lg text-gray-400 font-medium max-w-2xl mx-auto">
           We implement a data-driven, performance-oriented approach to ensure
           scalable and sustainable success.
         </p>
-        <div className="w-full h-[1220px] flex justify-between mt-16">
-          <div className="text-end w-full px-5">
-            <div className="space-y-5">
-              <p className="font-semibold text-2xl ">
+
+        <div className="w-full flex flex-col md:flex-row justify-between mt-8 md:mt-16 gap-8">
+          {/* Left Column */}
+          <div className="w-full md:w-1/2 space-y-12 md:space-y-16">
+            <div className="space-y-4 text-right md:text-end">
+              <p className="font-semibold text-xl md:text-2xl">
                 Foundation Phase (Week 1)
               </p>
-              <p className="text-xl tracking-wider">
+              <p className="text-lg md:text-xl tracking-wider">
                 Strategic Onboarding & Setup
               </p>
-              <p>
-                In this phase, we establish the fundamentals, including defining
-                your Ideal Customer Profile (ICP) and crafting an Irresistible
-                Core Offer.
-              </p>
-              <p>
-                After identifying your target audience, we build a
-                high-converting sales funnel and optimize your website landing
-                page and content.
-              </p>
-              <p>
-                With all elements in place, we launch the first campaign to
-                gather initial insights.
-              </p>
+              <div className="space-y-3 text-sm md:text-base">
+                <p>
+                  In this phase, we establish the fundamentals, including
+                  defining your Ideal Customer Profile (ICP) and crafting an
+                  Irresistible Core Offer.
+                </p>
+                <p>
+                  After identifying your target audience, we build a
+                  high-converting sales funnel and optimize your website landing
+                  page and content.
+                </p>
+                <p>
+                  With all elements in place, we launch the first campaign to
+                  gather initial insights.
+                </p>
+              </div>
             </div>
-            <div className="space-y-5 mt-80">
-              <p className="font-semibold text-2xl ">
+
+            <div className="space-y-4 text-right md:text-end">
+              <p className="font-semibold text-xl md:text-2xl">
                 Acceleration Phase (Month 2–3)
               </p>
-              <p className="text-xl tracking-wider">Scaling & Expansion</p>
-              <p>
-                From traction to takeoff—this is where we scale with confidence.
+              <p className="text-lg md:text-xl tracking-wider">
+                Scaling & Expansion
               </p>
-              <p>
-                Armed with high-performing data and proven strategies, we
-                increase ad spend, expand audiences, and optimize for sustained
-                growth. Leveraging advanced segmentation and conversion-focused
-                creatives, we drive exponential revenue while maintaining
-                efficiency.
-              </p>
-              <p>
-                By the end of this phase, your brand isn't just growing—it’s
-                accelerating toward market dominance.
-              </p>
+              <div className="space-y-3 text-sm md:text-base">
+                <p>
+                  From traction to takeoff—this is where we scale with
+                  confidence.
+                </p>
+                <p>
+                  Armed with high-performing data and proven strategies, we
+                  increase ad spend, expand audiences, and optimize for
+                  sustained growth...
+                </p>
+                <p>
+                  By the end of this phase, your brand isn't just growing—it’s
+                  accelerating toward market dominance.
+                </p>
+              </div>
             </div>
           </div>
-          <Separator orientation="vertical" className="border bg-white" />
-          <div className="text-start w-full px-5">
-            <div className="space-y-5 mt-72">
-              <p className="font-semibold text-2xl ">
+
+          {/* Separator - Hidden on mobile */}
+          <Separator
+            orientation="vertical"
+            className="hidden md:block border bg-white h-auto mx-4"
+          />
+
+          {/* Right Column */}
+          <div className="w-full md:w-1/2 space-y-12 md:space-y-16">
+            <div className="space-y-4 text-left">
+              <p className="font-semibold text-xl md:text-2xl">
                 Optimization Phase (Weeks 2–4)
               </p>
-              <p className="text-xl tracking-wider">Data-Driven Refinement</p>
-              <p>
-                Turning data into dominance—this is where strategy meets
-                precision.
+              <p className="text-lg md:text-xl tracking-wider">
+                Data-Driven Refinement
               </p>
-              <p>
-                With real-time analytics, A/B testing, and deep audience
-                insights, we refine every aspect of your campaign. From ad
-                creatives to targeting parameters, we optimize for peak
-                performance and maximize Return on Ad Spend (ROAS).
-              </p>
-              <p>
-                By the end of this phase, we’ve eliminated guesswork, fine-tuned
-                your funnel, and built a data-backed formula for scalable
-                success.
-              </p>
+              <div className="space-y-3 text-sm md:text-base">
+                <p>
+                  Turning data into dominance—this is where strategy meets
+                  precision.
+                </p>
+                <p>
+                  With real-time analytics, A/B testing, and deep audience
+                  insights, we refine every aspect of your campaign...
+                </p>
+                <p>
+                  By the end of this phase, we’ve eliminated guesswork,
+                  fine-tuned your funnel...
+                </p>
+              </div>
             </div>
-            <div className="space-y-5 mt-80 ">
-              <p className="font-semibold text-2xl ">
+
+            <div className="space-y-4 text-left">
+              <p className="font-semibold text-xl md:text-2xl">
                 Domination Phase (Month 4+)
               </p>
-              <p className="text-xl tracking-wider">
+              <p className="text-lg md:text-xl tracking-wider">
                 Market Leadership & Automation
               </p>
-              <p>
-                From growth to industry leadership—this is where you take
-                control.
-              </p>
-              <p>
-                With a solid foundation and proven strategies in place, we
-                implement automation, refine high-ROI channels, and establish
-                your brand as a dominant force. Advanced AI-driven optimizations
-                and predictive analytics ensure sustained profitability while
-                minimizing manual effort.
-              </p>
-              <p>
-                At this stage, your business isn’t just scaling—it’s leading the
-                market with unstoppable momentum.
-              </p>
+              <div className="space-y-3 text-sm md:text-base">
+                <p>
+                  From growth to industry leadership—this is where you take
+                  control.
+                </p>
+                <p>
+                  With a solid foundation and proven strategies in place, we
+                  implement automation...
+                </p>
+                <p>
+                  At this stage, your business isn’t just scaling—it’s leading
+                  the market...
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
+
+        <div className="flex justify-center mt-8">
           <motion.button
-            className="px-6 py-4 bg-black text-white rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300 mt-4 cursor-pointer"
+            className="px-4 py-2 md:px-6 md:py-4 bg-black text-white rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300 cursor-pointer text-sm md:text-base"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
